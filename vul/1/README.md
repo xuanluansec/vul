@@ -10,14 +10,14 @@ Payload:admin-manage-user.php?delete_user=1&admin_id=1%20AND%20(SELECT%20a%20FRO
 
 When you execute this payload, you will notice a delay of around 10 seconds. This indicates that the sleep statement has been successfully executed in the database, causing a SQL injection vulnerability.
 
-![1](/blob/main/vul/img/2.png)
+![1](https://github.com/xuanluansec/vul/blob/main/vul/img/2.png)
 
 The parameter received on line 22 of the admin-manage-user.php file in the website's root directory triggers a SQL injection vulnerability until line 26.
 
-![2](/blob/main/vul/img/1.png)
+![2](https://github.com/xuanluansec/vul/blob/main/vul/img/1.png)
 
 Note: I noticed that there is code ```require 'authentication.php';``` on line 2 of admin-manage-user.php, which seems to be related to login validation, but it is not effective. I was able to successfully perform SQL injection while unauthorized.
 
-![3](/blob/main/vul/img/4.png)
+![3](https://github.com/xuanluansec/vul/blob/main/vul/img/4.png)
 
-![4](/blob/main/vul/img/3.png)
+![4](https://github.com/xuanluansec/vul/blob/main/vul/img/3.png)
