@@ -19,8 +19,8 @@ Content-Length: 160
 id=-8845' UNION ALL SELECT (SELECT CONCAT(0x01,IFNULL(CAST(schema_name AS CHAR),0x20),0x01) FROM INFORMATION_SCHEMA.SCHEMATA LIMIT 12,1),NULL,NULL,NULL,NULL-- -
 ```
 
-![1](/img/4.png)
+![1](https://github.com/xuanluansec/vul/blob/main/vul/img/11.png)
 
 The include method in the second line of the get_single.data.php file in the root directory of the website retrieves user input from the POST element. Then, the value of this element will be passed to the code without proper purification or validation, and ultimately used for database queries in the include method on line 4 of the get_single.data.php file, leading to SQL injection attacks.
 
-![2](/img/5.png)
+![2](https://github.com/xuanluansec/vul/blob/main/vul/img/12.png)
