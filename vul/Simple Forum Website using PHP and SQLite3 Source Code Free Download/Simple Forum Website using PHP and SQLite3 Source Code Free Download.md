@@ -7,7 +7,7 @@
 # Overview
 + xuanluansec has discovered a vulnerability classified as critical in Simple Forum Website using PHP and SQLite3 Source Code Free Download V1.0. Any file contains. This operation will result in unrestricted file inclusion, allowing remote execution of arbitrary code.
 # Vulnerability Details
-+ Simple Forum Website using PHP and SQLite3 Source Code Free DownloadV1.0
++ Simple Forum Website using PHP and SQLite3 Source Code Free Download V1.0
 + Vulnerable File: index.php
 + Parameter Names: page
 + Attack Type: Remote
